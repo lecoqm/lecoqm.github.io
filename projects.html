@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1c1e22">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Mathis Lecoq's projects in machine learning: bike demand forecasting, molecular graph captioning, and an upcoming industrial anomaly detection project.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Project Details — Mathis Lecoq">
+  <meta property="og:description" content="Projects in forecasting and MLOps, graph and language models, and industrial sensor time series.">
+  <meta property="og:url" content="https://lecoqm.github.io/projects.html">
+  <title>Project Details — Mathis Lecoq</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/site.js" defer></script>
+</head>
+<body id="top" data-page="projects">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-layout">
+    <aside class="profile-sidebar" aria-labelledby="profile-name">
+      <!-- PROFILE: keep this block consistent in index.html and projects.html. -->
+      <a class="profile-home" href="index.html"><h2 id="profile-name">Mathis Lecoq</h2></a>
+      <!-- Replace assets/profile.svg with your photo and update the alt text. -->
+      <img class="profile-image" src="assets/profile.svg" width="152" height="152" alt="ML, Mathis Lecoq’s initials">
+      <p class="profile-role">Data science & machine learning</p>
+      <p class="profile-bio">I work on forecasting, graph and language models, and anomaly detection for industrial sensor data.</p>
+
+      <!-- Optional CV link: add your PDF at assets/cv.pdf, then uncomment.
+      <a class="cv-link" href="assets/cv.pdf" download>Download my CV <span aria-hidden="true">↓</span></a>
+      -->
+
+      <nav class="sidebar-nav" aria-label="Main navigation">
+        <a href="index.html" data-nav="home">Home <span aria-hidden="true">→</span></a>
+        <a href="projects.html" data-nav="projects" aria-current="page">Projects <span aria-hidden="true">→</span></a>
+        <a href="index.html#about" data-nav="about">About me <span aria-hidden="true">→</span></a>
+      </nav>
+      <div class="profile-links" aria-label="Professional profiles">
+        <a href="https://github.com/lecoqm">GitHub <span aria-hidden="true">↗</span></a>
+        <a href="https://www.linkedin.com/in/mathis-lecoq-918a831a6/">LinkedIn <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="sidebar-footer"><p>Mathis Lecoq · Portfolio</p><p>Hosted on GitHub Pages</p></div>
+    </aside>
+
+    <main id="main">
+      <p class="back-link"><a href="index.html">← Home</a></p>
+      <section class="projects-section" id="projects" aria-labelledby="projects-title">
+        <header class="page-heading">
+          <p class="eyebrow">Portfolio</p>
+          <h1 id="projects-title">Projects</h1>
+          <p>Selected work in machine learning, from model experiments to reproducible pipelines, serving, and monitoring.</p>
+        </header>
+
+        <article class="project" id="bike-demand" aria-labelledby="bike-title">
+          <div class="project-heading"><h2 id="bike-title">Bike Demand Forecasting</h2><span class="status">Public project</span></div>
+          <dl class="project-summary">
+            <div><dt>Stack</dt><dd>Python, scikit-learn, FastAPI, MLflow, pytest</dd></div>
+            <div><dt>Focus</dt><dd>Hourly forecasting and the ML lifecycle</dd></div>
+            <div><dt>Links</dt><dd><a href="https://github.com/lecoqm/bike_demand_forecasting">Repository <span aria-hidden="true">↗</span></a></dd></div>
+          </dl>
+          <p>An hourly bike demand forecasting project with the tools to train, serve, replay, monitor, and compare models using public bike-sharing data.</p>
+
+          <figure class="workflow-figure">
+            <div class="workflow" role="img" aria-label="Workflow: train and track a model, serve and replay predictions, monitor errors and coverage, then compare and promote a candidate.">
+              <div><span class="workflow-number">01</span><strong>Train & track</strong><small>Features · MLflow</small></div>
+              <div><span class="workflow-number">02</span><strong>Serve & replay</strong><small>FastAPI · logs</small></div>
+              <div><span class="workflow-number">03</span><strong>Monitor</strong><small>Errors · coverage</small></div>
+              <div><span class="workflow-number">04</span><strong>Compare</strong><small>Promote · rollback</small></div>
+            </div>
+            <figcaption>Workflow overview</figcaption>
+          </figure>
+
+          <h3>Challenge</h3>
+          <p>Make forecasting evaluation reflect how the model will be used: features must respect time order, and a candidate must be compared with the current model on identical later hours.</p>
+
+          <h3>Implementation</h3>
+          <ul>
+            <li><strong>Reproducible training:</strong> chronological splits, causal lag features, a baseline, and tracked experiments.</li>
+            <li><strong>Prediction service:</strong> a FastAPI application with validation and structured prediction logs.</li>
+            <li><strong>Replay and monitoring:</strong> historical requests, missing-history and invalid-request scenarios, and reports covering prediction errors and coverage.</li>
+            <li><strong>Model management:</strong> candidate comparison, promotion, and rollback.</li>
+          </ul>
+
+          <h3>Results & deliverables</h3>
+          <ul>
+            <li>A complete demonstration that connects model comparison, replay, and monitoring.</li>
+            <li>HTML reports for inspecting forecasts, scenarios, and model comparisons.</li>
+            <li>Automated tests and CI, with setup and reproduction instructions in the repository.</li>
+          </ul>
+        </article>
+
+        <article class="project" id="molecular-captioning" aria-labelledby="molecular-title">
+          <div class="project-heading"><h2 id="molecular-title">Molecular Graph Captioning</h2><span class="status status-team">Team project</span></div>
+          <dl class="project-summary">
+            <div><dt>Stack</dt><dd>PyTorch Geometric, GNNs, contrastive learning, language models</dd></div>
+            <div><dt>Focus</dt><dd>Molecular graphs to natural-language descriptions</dd></div>
+            <div><dt>Links</dt><dd><a href="https://github.com/lecoqm/molecular-graph-captioning">My fork <span aria-hidden="true">↗</span></a><span class="link-divider" aria-hidden="true">·</span><a href="https://github.com/Nazim-fad/molecular-graph-captioning">Team repository <span aria-hidden="true">↗</span></a></dd></div>
+          </dl>
+          <p>A collaborative ALTEGRAD project investigating how to connect molecular structure with text. We explored retrieval, retrieval-augmented generation, and direct graph-to-text generation.</p>
+          <p class="team-credit"><strong>Team:</strong> Mathis Lecoq, Nazim Fadli, and Zié Coulibaly. We worked across the modelling approaches, experiments, and analysis.</p>
+
+          <figure class="approaches-figure">
+            <div class="approach-row"><span class="approach-label">Retrieval</span><span>Graph encoder</span><span class="flow-arrow" aria-hidden="true">→</span><span>Text embedding match</span></div>
+            <div class="approach-row"><span class="approach-label">RAG</span><span>Retrieved descriptions</span><span class="flow-arrow" aria-hidden="true">→</span><span>Language model</span></div>
+            <div class="approach-row"><span class="approach-label">Generation</span><span>Graph representation</span><span class="flow-arrow" aria-hidden="true">→</span><span>Text decoder</span></div>
+            <figcaption>Three approaches explored by the team</figcaption>
+          </figure>
+
+          <h3>Challenge</h3>
+          <p>Generate a useful natural-language description from a graph representation of a molecule, and compare different ways of connecting structural and language representations.</p>
+
+          <h3>Approaches</h3>
+          <ul>
+            <li><strong>Graph–text retrieval:</strong> align graph and text embeddings using contrastive learning, then retrieve matching descriptions.</li>
+            <li><strong>Retrieval-augmented generation:</strong> use retrieved descriptions to support a language model.</li>
+            <li><strong>Direct generation:</strong> condition a text decoder on a graph representation.</li>
+          </ul>
+
+          <h3>Results & deliverables</h3>
+          <p>The project compares these modelling strategies and documents the experiments and results in the repository. My fork presents the collective work and links back to the original team repository.</p>
+        </article>
+
+        <article class="project project-planned" id="industrial-anomalies" aria-labelledby="industrial-title">
+          <div class="project-heading"><h2 id="industrial-title">Industrial Anomaly Detection</h2><span class="status status-soon">Coming soon</span></div>
+          <dl class="project-summary">
+            <div><dt>Methods</dt><dd>LSTM forecasting, residuals, adaptive alert thresholds</dd></div>
+            <div><dt>Data</dt><dd>Public industrial sensor time series — dataset to be selected</dd></div>
+            <div><dt>Status</dt><dd>Public implementation planned</dd></div>
+          </dl>
+          <p>A future open-source project inspired by my internship on anomaly detection in industrial sensor data. It will use public data and a standalone implementation.</p>
+
+          <h3>The question</h3>
+          <p>How can an adaptive alert threshold detect a sustained fault without gradually absorbing the abnormal behaviour into its definition of normal?</p>
+
+          <h3>Planned scope</h3>
+          <ul>
+            <li>Train a forecasting model on normal observations and derive anomaly scores from its residuals.</li>
+            <li>Compare fixed and adaptive thresholds using the same saved residuals.</li>
+            <li>Evaluate detected events, false alerts, and detection delay on labelled public data.</li>
+          </ul>
+          <p class="coming-soon-note">The repository and experimental results will be added here when the public project is ready.</p>
+        </article>
+      </section>
+
+      <footer class="content-footer"><span>Mathis Lecoq</span><a href="#top">Back to top <span aria-hidden="true">↑</span></a></footer>
+    </main>
+  </div>
+</body>
+</html>
