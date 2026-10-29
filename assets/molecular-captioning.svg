@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="310" class="project-illustration" viewBox="0 0 500 310" role="img" aria-labelledby="molecule-diagram-title molecule-diagram-desc">
+            <title id="molecule-diagram-title">Connecting graph and language representations</title>
+            <desc id="molecule-diagram-desc">An abstract molecular graph is encoded and connected with a text representation for retrieval or generation. The graph is illustrative.</desc><rect width="500" height="310" fill="#e3e8ef"/>
+            <g stroke="#8a9bae" stroke-width="2" fill="none"><path d="M74 150L108 91L175 91L208 150L175 209L108 209Z"/><path d="M175 91L204 43M208 150H247M108 209L78 258M108 91L82 47"/><path d="M117 108H165M187 149L165 190M105 190L84 151" stroke-width="1.2"/></g>
+            <g fill="#e7ebf2" stroke="#687d96" stroke-width="1.5"><circle cx="74" cy="150" r="10"/><circle cx="108" cy="91" r="10"/><circle cx="175" cy="91" r="10"/><circle cx="208" cy="150" r="10"/><circle cx="175" cy="209" r="10"/><circle cx="108" cy="209" r="10"/></g>
+            <circle cx="204" cy="43" r="13" fill="#617494"/><circle cx="247" cy="150" r="13" fill="#b35d55"/><circle cx="78" cy="258" r="8" fill="#a7b5c7"/><circle cx="82" cy="47" r="8" fill="#a7b5c7"/>
+            <path d="M273 150H308M300 143L308 150L300 157" stroke="#556e8c" stroke-width="1.5" fill="none"/>
+            <g transform="translate(331 68)"><rect width="132" height="171" rx="8" fill="#f9f8f4" stroke="#a6b3c4"/><rect x="15" y="20" width="65" height="5" rx="2" fill="#647b97"/><g fill="#c1cbd7"><rect x="15" y="43" width="100" height="4" rx="2"/><rect x="15" y="57" width="89" height="4" rx="2"/><rect x="15" y="71" width="100" height="4" rx="2"/><rect x="15" y="85" width="77" height="4" rx="2"/></g><path d="M15 110H117" stroke="#d8dee7"/><text x="15" y="132" fill="#526a86" font-family="ui-monospace, monospace" font-size="10">retrieve</text><text x="15" y="148" fill="#526a86" font-family="ui-monospace, monospace" font-size="10">or generate</text></g>
+            <text x="143" y="294" fill="#526a86" text-anchor="middle" font-family="ui-monospace, monospace" font-size="11">graph representation</text>
+            <text x="398" y="270" fill="#526a86" text-anchor="middle" font-family="ui-monospace, monospace" font-size="11">text description</text>
+          </svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="310" class="project-illustration" viewBox="0 0 500 310" role="img" aria-labelledby="industrial-diagram-title industrial-diagram-desc">
+            <title id="industrial-diagram-title">A planned study of residuals and alert thresholds</title>
+            <desc id="industrial-diagram-desc">A conceptual sensor signal, a predicted signal, and a sustained residual above a threshold. These are illustrations, not experimental results.</desc><rect width="500" height="310" fill="#eee1d0"/>
+            <defs><pattern id="sensor-grid" width="38" height="38" patternUnits="userSpaceOnUse"><path d="M38 0H0V38" fill="none" stroke="#dbc5ae" stroke-width=".7"/></pattern></defs>
+            <rect x="36" y="45" width="428" height="208" fill="url(#sensor-grid)"/>
+            <rect x="293" y="45" width="119" height="208" rx="3" fill="#d9a67e" opacity=".17"/>
+            <g fill="#805a3b" font-family="ui-monospace, monospace" font-size="10"><text x="38" y="32">SENSOR / FORECAST</text><text x="38" y="184">RESIDUAL / THRESHOLD</text><text x="295" y="277">sustained deviation</text></g>
+            <path d="M37 117C55 117 60 84 80 84S108 137 129 137S155 83 176 83S203 138 225 138S250 85 270 85S295 137 317 137S344 83 365 83S394 137 415 137S440 85 463 85" fill="none" stroke="#a58e73" stroke-width="2" stroke-dasharray="5 5"/>
+            <path d="M37 118C55 119 61 82 80 85S108 139 129 135S155 84 176 85S204 137 225 135S250 82 270 85S287 79 296 72S310 58 325 62S348 37 367 45S393 74 415 75S440 84 463 82" fill="none" stroke="#a04e2d" stroke-width="2.8" stroke-linecap="round"/>
+            <path d="M37 220H463" stroke="#927458" stroke-width="1.5" stroke-dasharray="5 5"/>
+            <path d="M37 244L58 241L79 244L100 242L121 245L142 241L163 245L184 244L205 241L226 244L247 242L268 244L283 241L297 213L309 203L330 208L352 200L373 206L394 202L412 219L432 231L463 241" fill="none" stroke="#a04e2d" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="297" cy="213" r="5" fill="#a04e2d" stroke="#f0e6d9" stroke-width="2"/>
+          </svg>

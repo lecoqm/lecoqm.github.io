@@ -61,6 +61,13 @@ main { min-width: 0; padding-bottom: 35px; }
 .project-preview .project-heading h3 { font-size: 22px; margin: 0; letter-spacing: -.02em; }
 .project-title-link { color: var(--heading); }
 .project-title-link:hover { color: var(--accent); }
+.project-cover { margin: 20px 0 22px; }
+.project-image-link { display: block; overflow: hidden; border: 1px solid var(--line); border-radius: 5px; }
+.project-image-link:hover { border-color: var(--accent); }
+.project-image-link img { display: block; width: 100%; max-width: 500px; height: auto; margin-inline: auto; }
+.cover-bike-demand { background: #174b3f; }
+.cover-molecular-captioning { background: #e3e8ef; }
+.cover-industrial-anomalies { background: #eee1d0; }
 .project-preview .project-summary { margin-bottom: 17px; }
 .project-preview p { margin-bottom: 16px; }
 .read-more { display: inline-block; font-size: 13px; }
@@ -168,6 +175,7 @@ figcaption { color: var(--muted); font-size: 11px; line-height: 1.6; margin-top:
   h3 { font-size: 16px; }
   .project-heading { gap: 9px; }
   .project-preview .project-heading h3 { font-size: 21px; }
+  .project-cover { margin: 17px 0 20px; }
   .project-summary { font-size: 12px; }
   .project-summary>div { grid-template-columns: 47px minmax(0,1fr); gap: 7px; }
   .link-divider { padding: 0 5px; }

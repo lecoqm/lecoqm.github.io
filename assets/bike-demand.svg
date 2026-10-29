@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="310" class="project-illustration bike-illustration" viewBox="0 0 500 310" role="img" aria-labelledby="bike-diagram-title bike-diagram-desc">
+            <title id="bike-diagram-title">A model inside a forecasting system</title>
+            <desc id="bike-diagram-desc">Hourly observations feed model training and an API. Prediction logs support replay, monitoring, and model comparison.</desc><rect width="500" height="310" fill="#174b3f"/>
+            <defs><pattern id="bike-grid" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#aac8b9" opacity=".4"/></pattern><marker id="bike-arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0L6 3L0 6" fill="none" stroke="#cce2d4" stroke-width="1.3"/></marker></defs>
+            <rect width="500" height="310" fill="url(#bike-grid)"/>
+            <g fill="none" stroke="#cce2d4" stroke-width="1.5" marker-end="url(#bike-arrow)"><path d="M168 79H227"/><path d="M356 79H412V210H356"/><path d="M227 236H168"/><path d="M103 207V110"/></g>
+            <g fill="#164e42" stroke="#8cae9d" stroke-width="1.2"><rect x="38" y="48" width="130" height="62" rx="8"/><rect x="227" y="48" width="130" height="62" rx="8"/><rect x="227" y="207" width="130" height="62" rx="8"/><rect x="38" y="207" width="130" height="62" rx="8"/></g>
+            <g fill="#f1f3e8" font-family="system-ui, sans-serif" text-anchor="middle" font-size="14"><text x="103" y="75">Hourly data</text><text x="292" y="75">Train &amp; track</text><text x="292" y="234">Serve &amp; replay</text><text x="103" y="234">Monitor</text></g>
+            <g fill="#b6d1c0" font-family="ui-monospace, monospace" text-anchor="middle" font-size="10"><text x="103" y="94">CAUSAL FEATURES</text><text x="292" y="94">MLFLOW</text><text x="292" y="253">FASTAPI</text><text x="103" y="253">ERRORS + COVERAGE</text></g>
+            <g transform="translate(172 134)"><rect width="158" height="44" rx="22" fill="#dce8b8"/><text x="79" y="27" text-anchor="middle" fill="#1b453c" font-family="ui-monospace, monospace" font-size="12">compare → promote</text></g>
+          </svg>

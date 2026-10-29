@@ -2,10 +2,12 @@
 
 A static portfolio for **https://lecoqm.github.io/**, with a dark background and a profile column. The layout follows the structure requested by Mathis, inspired by <https://mreleden.github.io/index.html>.
 
-- **Home — `index.html`:** introduction, short summaries of the three featured projects, About me, and Contact.
+- **Home — `index.html`:** introduction, illustrated summaries of the three featured projects, About me, and Contact.
 - **Project details — `projects.html`:** full write-ups, methods, deliverables, and the upcoming project's outline.
 
 Each project title and its details link on the home page opens the matching section of `projects.html`. The sidebar and back links let visitors move between the two pages.
+
+The home page also restores the three illustrations from the first portfolio design. Clicking an illustration opens its project write-up.
 
 The desktop profile column stays visible while scrolling. On smaller screens, the profile moves above the projects. All content and links work without JavaScript. There are no dependencies or build tools.
 
@@ -18,8 +20,8 @@ The desktop profile column stays visible while scrolling. On smaller screens, th
 
    ```powershell
    git status
-   git add index.html projects.html README.md assets/styles.css assets/site.js assets/favicon.svg assets/profile.svg
-   git commit -m "Add contact section after About me"
+   git add index.html projects.html README.md assets
+   git commit -m "Restore project illustrations on portfolio home page"
    git push
    ```
 
@@ -80,7 +82,9 @@ The home page has a short `<article>` for each project. Full write-ups are in `p
 
 When the third repository is ready, update its summary in `index.html` and its full write-up in `projects.html`. Replace the planned scope with the actual work, change its status label, and add the repository URL. Only add measured results together with the evaluation context needed to understand them.
 
-The workflow figures are explanations of the approaches. They are not dashboards or measured experimental results.
+The project illustrations and workflow figures explain the approaches. They are not dashboards or measured experimental results. The sensor illustration is explicitly labelled as conceptual, and the molecular graph is an abstract illustration.
+
+The home-page artwork is stored in `assets/bike-demand.svg`, `assets/molecular-captioning.svg`, and `assets/industrial-anomalies.svg`. These self-contained vector images stay sharp on different screens and use no external resources.
 
 ## Files and styling
 
@@ -89,6 +93,7 @@ The workflow figures are explanations of the approaches. They are not dashboards
 - `assets/styles.css`: colours, typography, the sticky column, and mobile layout. The colour palette is defined in `:root` at the top.
 - `assets/site.js`: optional active-navigation highlighting.
 - `assets/profile.svg`: default initials image.
+- `assets/bike-demand.svg`, `assets/molecular-captioning.svg`, `assets/industrial-anomalies.svg`: the three original project illustrations.
 - `assets/favicon.svg`: browser icon.
 - `.nojekyll`: static GitHub Pages serving.
 
