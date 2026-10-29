@@ -1,71 +1,105 @@
 # Mathis Lecoq — portfolio
 
-A static portfolio prepared for **https://lecoqm.github.io/**.
+A static portfolio for **https://lecoqm.github.io/**, with a dark background, a profile column, and a project list. The layout follows the profile-and-projects structure requested by Mathis, inspired by <https://mreleden.github.io/projects.html>.
 
-It presents:
+The desktop profile column stays visible while scrolling. On smaller screens, the profile moves above the projects. All content and links work without JavaScript. There are no dependencies or build tools.
 
-1. [Bike demand forecasting](https://github.com/lecoqm/bike_demand_forecasting): forecasting, model tracking, API serving, replay, monitoring, and model comparison.
-2. [Molecular graph captioning](https://github.com/lecoqm/molecular-graph-captioning): a shared ALTEGRAD project with Nazim Fadli and Zié Coulibaly. The page links to both Mathis's fork and the original team repository and describes the collaborative contribution across approaches.
-3. Industrial anomaly detection: a clearly labelled **coming soon** entry for a future project using public data. There is no repository link or published performance claim for this project yet.
+## Update the existing site
 
-## Publish with GitHub Pages
-
-These instructions assume that you do not already have a `lecoqm.github.io` repository. If you do, use its existing checkout and keep unrelated files.
-
-1. On GitHub, create a **public** repository named exactly **`lecoqm.github.io`**. Leave README, licence, and .gitignore initialization unchecked: these files are already in this folder.
-2. Extract the ZIP on your computer. Open PowerShell inside the extracted `lecoqm.github.io` folder, where `index.html` and `README.md` are directly visible.
-3. Upload the source with Git:
+1. Extract the ZIP. Inside `lecoqm.github.io`, you will find `index.html`, `README.md`, and the `assets` folder.
+2. Copy these files into your existing local **lecoqm.github.io** Git repository, replacing the matching files and adding `assets/profile.svg`. Preserve any unrelated files you have added.
+3. Preview the result by opening `index.html` in a browser.
+4. From your repository folder, use PowerShell:
 
    ```powershell
-   git init -b main
-   git add .
-   git commit -m "Create machine learning portfolio"
-   git remote add origin https://github.com/lecoqm/lecoqm.github.io.git
-   git push -u origin main
+   git status
+   git add index.html README.md assets/styles.css assets/site.js assets/favicon.svg assets/profile.svg
+   git commit -m "Redesign portfolio with dark theme and profile sidebar"
+   git push
    ```
 
-4. In the GitHub repository, open **Settings → Pages**.
-5. Under **Build and deployment**, set **Source** to **Deploy from a branch**. Choose **main**, **/ (root)**, then **Save**.
-6. Wait for the Pages deployment to complete, then open **https://lecoqm.github.io/**. The first deployment can take several minutes.
+Your existing GitHub Pages deployment settings stay the same. Wait for the Pages deployment to complete, then refresh **https://lecoqm.github.io/**. If your browser still shows the old version, use Ctrl+F5.
 
-You are publishing the extracted site files, not the ZIP itself. This is a separate portfolio repository; do not put these files into either machine learning project's source tree.
+Commit the extracted website files, not the ZIP.
 
-Official instructions: <https://docs.github.com/en/pages/quickstart>.
+## Personalise the left column
+
+Open `index.html` and find the comment beginning **PROFILE**.
+
+- **Name:** edit `profile-name`.
+- **Role or headline:** edit the paragraph with `class="profile-role"`.
+- **Short biography:** edit the paragraph with `class="profile-bio"`.
+- **Links:** edit the GitHub and LinkedIn anchors in `profile-links`.
+- **Longer biography:** edit the section with `id="about"` near the end of the file.
+
+### Add your photograph
+
+The initial version uses an SVG with the initials **ML**. To use a portrait:
+
+1. Add the image as `assets/profile.jpg`.
+2. Change the profile `<img>` to:
+
+   ```html
+   <img class="profile-image" src="assets/profile.jpg" width="152" height="152" alt="Portrait of Mathis Lecoq">
+   ```
+
+The CSS crops the image to a circle. A square photo works best.
+
+### Add your CV
+
+1. Add your PDF as `assets/cv.pdf`.
+2. In the **PROFILE** block, find the comment beginning **Optional CV link**.
+3. Remove the surrounding HTML comment markers and explanatory sentence, leaving only:
+
+   ```html
+   <a class="cv-link" href="assets/cv.pdf" download>Download my CV <span aria-hidden="true">↓</span></a>
+   ```
+
+4. Add the new assets to your next commit along with your HTML changes.
+
+The download link is absent until a PDF is added.
+
+## Edit the projects
+
+Each project is an `<article>` in `index.html` with a heading, a stack/focus/links summary, and visible project notes:
+
+1. **Bike demand forecasting** (`bike-demand`): public project covering forecasting and the ML lifecycle.
+2. **Molecular graph captioning** (`molecular-captioning`): collective ALTEGRAD work with Nazim Fadli and Zié Coulibaly, with links to Mathis's fork and the original team repository.
+3. **Industrial anomaly detection** (`industrial-anomalies`): future public-data project, clearly marked **Coming soon**.
+
+When the third repository is ready, replace its planned scope with the actual work, change its status label, and add the repository URL to its summary. Only add measured results together with the evaluation context needed to understand them.
+
+The workflow figures are explanations of the approaches. They are not dashboards or measured experimental results.
+
+## Files and styling
+
+- `index.html`: profile, projects, biography, and links.
+- `assets/styles.css`: colours, typography, the sticky column, and mobile layout. The colour palette is defined in `:root` at the top.
+- `assets/site.js`: optional active-navigation highlighting.
+- `assets/profile.svg`: default initials image.
+- `assets/favicon.svg`: browser icon.
+- `.nojekyll`: static GitHub Pages serving.
+
+There are no third-party fonts, analytics scripts, or external image requests.
 
 ## Preview locally
 
-Open `index.html` directly in a browser. The content, styles, diagrams, links, and expandable notes work from a local file without a server or JavaScript.
-
-Alternatively, from this folder:
+Open `index.html` directly. Alternatively, run the following from the repository folder:
 
 ```powershell
 python -m http.server 8000
 ```
 
-Then open <http://localhost:8000>. Stop the server with Ctrl+C.
+Then visit <http://localhost:8000>. Stop the server with Ctrl+C.
 
-## Edit the portfolio
+## First deployment, if needed
 
-- **Text and links:** `index.html`.
-- **Colours, spacing, and responsive layout:** `assets/styles.css`.
-- **Optional active navigation:** `assets/site.js`.
-- **Browser icon:** `assets/favicon.svg`.
+For a new installation, create a public GitHub repository named **lecoqm.github.io**, push these extracted files, then select **Settings → Pages → Deploy from a branch → main → / (root)**.
 
-To add the internship-inspired project later, find the article with `id="industrial-anomalies"` in `index.html`:
+Official documentation: <https://docs.github.com/en/pages/quickstart>.
 
-1. Replace the planned description and outline with the actual public project's methods and results.
-2. Change its status from "Coming soon" to "Public repository".
-3. Replace the planned-note paragraph with an actual repository link, following the first project's `text-link` pattern.
-4. Update the portfolio index, the "Two public repositories" count, and the artwork's preparation label as appropriate.
+## Attribution
 
-Keep illustrations labelled as conceptual unless they are replaced with measured results. The sensor illustration currently contains no experimental data. The graph illustration is an abstract representation, not a validated chemical structure.
+The layout was inspired by Mathias Villerabel's projects page. The portfolio implementation, text, and diagrams were prepared for Mathis Lecoq; no portrait, stylesheet, project image, or project result was copied from the reference page.
 
-## Content and attribution
-
-The portfolio descriptions are based on the projects discussed with Mathis. Source repositories are linked from each project. No numerical performance scores are reproduced on this page. Project details and results belong in their respective repositories, where their evaluation context can be inspected.
-
-The molecular project is collective work; this portfolio does not assign ownership from commit counts. Its original team repository is <https://github.com/Nazim-fad/molecular-graph-captioning>.
-
-The industrial project entry describes a future public-data implementation. The website contains no internship report, slide deck, employer source code, private dataset, or internal experimental result.
-
-All artwork is inline SVG created for this portfolio. The site uses system fonts, makes no third-party font or analytics requests, and has no runtime dependencies, installation, or build step. `.nojekyll` allows GitHub Pages to serve it as static files.
+The project descriptions are based on the work discussed with Mathis. The molecular project is collective work, and its source repositories are linked. The internship-inspired entry contains no employer source code, internal report, private data, or internal experimental results.
