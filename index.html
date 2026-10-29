@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4ef">
+  <meta name="description" content="Mathis Lecoq's machine learning portfolio: bike demand forecasting, molecular graph captioning, and an upcoming industrial anomaly detection project.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mathis Lecoq — Data Science & Machine Learning">
+  <meta property="og:description" content="From model experiments to working systems. Explore projects in forecasting, graph and language models, and industrial anomaly detection.">
+  <meta property="og:url" content="https://lecoqm.github.io/">
+  <title>Mathis Lecoq — Data Science & Machine Learning</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="wordmark" href="#top" aria-label="Mathis Lecoq, back to top">
+        <span class="monogram" aria-hidden="true">ml<span>.</span></span>
+        <span>Mathis Lecoq</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#work">Projects</a>
+        <a href="#approach">About</a>
+        <a class="nav-github" href="https://github.com/lecoqm">GitHub <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero container" id="top" aria-labelledby="intro-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="tiny-square" aria-hidden="true"></span> Data science & machine learning</p>
+        <h1 id="intro-title">From experiments<br>to <em>working systems.</em></h1>
+        <p class="hero-description">I’m Mathis. I work on machine learning problems from model design and evaluation to the software around them.</p>
+        <p class="hero-description secondary-description">This is a selection of my work in forecasting, graph and language models, and industrial sensor data.</p>
+        <a class="button button-dark" href="#work">Explore the projects <span aria-hidden="true">↓</span></a>
+      </div>
+      <aside class="field-notes" aria-label="Portfolio at a glance">
+        <div class="field-notes-heading"><span class="eyebrow">In this portfolio</span><span class="note-cross" aria-hidden="true">+</span></div>
+        <a class="index-item" href="#bike-demand"><span class="index-number">01</span><span><strong>Forecasting & MLOps</strong><small>Build, serve, monitor</small></span><span class="index-arrow" aria-hidden="true">↗</span></a>
+        <a class="index-item" href="#molecular-captioning"><span class="index-number">02</span><span><strong>Graphs & language</strong><small>Represent, retrieve, generate</small></span><span class="index-arrow" aria-hidden="true">↗</span></a>
+        <a class="index-item" href="#industrial-anomalies"><span class="index-number">03</span><span><strong>Industrial time series</strong><small>Public project coming soon</small></span><span class="index-arrow" aria-hidden="true">↗</span></a>
+        <p class="field-note">Different problems. A common focus on evaluation, reproducibility, and understanding where models fail.</p>
+      </aside>
+    </section>
+
+    <section class="work-section container" id="work" aria-labelledby="work-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">The work</p><h2 id="work-title">Selected projects<span class="accent-dot">.</span></h2></div>
+        <p class="section-aside">Two public repositories.<br>One project to come.</p>
+      </div>
+
+      <article class="project project-bike" id="bike-demand" aria-labelledby="bike-title">
+        <div class="project-art art-bike">
+          <div class="art-meta"><span>01 / FORECASTING</span><span aria-hidden="true">↗</span></div>
+          <svg class="project-illustration bike-illustration" viewBox="0 0 500 310" role="img" aria-labelledby="bike-diagram-title bike-diagram-desc">
+            <title id="bike-diagram-title">A model inside a forecasting system</title>
+            <desc id="bike-diagram-desc">Hourly observations feed model training and an API. Prediction logs support replay, monitoring, and model comparison.</desc>
+            <defs><pattern id="bike-grid" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#aac8b9" opacity=".4"/></pattern><marker id="bike-arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0L6 3L0 6" fill="none" stroke="#cce2d4" stroke-width="1.3"/></marker></defs>
+            <rect width="500" height="310" fill="url(#bike-grid)"/>
+            <g fill="none" stroke="#cce2d4" stroke-width="1.5" marker-end="url(#bike-arrow)"><path d="M168 79H227"/><path d="M356 79H412V210H356"/><path d="M227 236H168"/><path d="M103 207V110"/></g>
+            <g fill="#164e42" stroke="#8cae9d" stroke-width="1.2"><rect x="38" y="48" width="130" height="62" rx="8"/><rect x="227" y="48" width="130" height="62" rx="8"/><rect x="227" y="207" width="130" height="62" rx="8"/><rect x="38" y="207" width="130" height="62" rx="8"/></g>
+            <g fill="#f1f3e8" font-family="system-ui, sans-serif" text-anchor="middle" font-size="14"><text x="103" y="75">Hourly data</text><text x="292" y="75">Train & track</text><text x="292" y="234">Serve & replay</text><text x="103" y="234">Monitor</text></g>
+            <g fill="#b6d1c0" font-family="ui-monospace, monospace" text-anchor="middle" font-size="10"><text x="103" y="94">CAUSAL FEATURES</text><text x="292" y="94">MLFLOW</text><text x="292" y="253">FASTAPI</text><text x="103" y="253">ERRORS + COVERAGE</text></g>
+            <g transform="translate(172 134)"><rect width="158" height="44" rx="22" fill="#dce8b8"/><text x="79" y="27" text-anchor="middle" fill="#1b453c" font-family="ui-monospace, monospace" font-size="12">compare → promote</text></g>
+          </svg>
+          <div class="art-caption"><span>A forecast is part of a system.</span><span class="art-caption-index">01—03</span></div>
+        </div>
+        <div class="project-copy">
+          <div class="project-topline"><p class="eyebrow">Time series · ML engineering</p><span class="status status-public"><span aria-hidden="true"></span> Public repository</span></div>
+          <h3 id="bike-title">Bike demand<br>forecasting</h3>
+          <p class="project-lead">An hourly prediction problem, extended into a reproducible ML workflow.</p>
+          <p>Train and track a demand model, serve predictions through an API, replay historical requests, and inspect monitoring reports. Compare a candidate against the current model on the same later hours, with promotion and rollback.</p>
+          <ul class="tags" aria-label="Technologies"><li>Python</li><li>scikit-learn</li><li>FastAPI</li><li>MLflow</li></ul>
+          <a class="text-link" href="https://github.com/lecoqm/bike_demand_forecasting">View repository <span aria-hidden="true">↗</span></a>
+        </div>
+        <details class="project-details">
+          <summary><span>Read project notes</span><span class="details-toggle" aria-hidden="true"></span></summary>
+          <div class="detail-grid">
+            <div><h4>The problem</h4><p>Predict hourly bike demand using public bike-sharing data. Respect time order when creating features and evaluating forecasts.</p></div>
+            <div><h4>The implementation</h4><p>Chronological training and evaluation, tracked experiments, an API, structured prediction logs, replay scenarios, and HTML monitoring reports.</p></div>
+            <div><h4>What to inspect</h4><p>The end-to-end demonstration and test suite in the repository show the path from a candidate model to replay, monitoring, promotion, and rollback.</p></div>
+          </div>
+        </details>
+      </article>
+
+      <article class="project project-molecular" id="molecular-captioning" aria-labelledby="molecular-title">
+        <div class="project-art art-molecular">
+          <div class="art-meta"><span>02 / GRAPHS + LANGUAGE</span><span aria-hidden="true">↗</span></div>
+          <svg class="project-illustration" viewBox="0 0 500 310" role="img" aria-labelledby="molecule-diagram-title molecule-diagram-desc">
+            <title id="molecule-diagram-title">Connecting graph and language representations</title>
+            <desc id="molecule-diagram-desc">An abstract molecular graph is encoded and connected with a text representation for retrieval or generation. The graph is illustrative.</desc>
+            <g stroke="#8a9bae" stroke-width="2" fill="none"><path d="M74 150L108 91L175 91L208 150L175 209L108 209Z"/><path d="M175 91L204 43M208 150H247M108 209L78 258M108 91L82 47"/><path d="M117 108H165M187 149L165 190M105 190L84 151" stroke-width="1.2"/></g>
+            <g fill="#e7ebf2" stroke="#687d96" stroke-width="1.5"><circle cx="74" cy="150" r="10"/><circle cx="108" cy="91" r="10"/><circle cx="175" cy="91" r="10"/><circle cx="208" cy="150" r="10"/><circle cx="175" cy="209" r="10"/><circle cx="108" cy="209" r="10"/></g>
+            <circle cx="204" cy="43" r="13" fill="#617494"/><circle cx="247" cy="150" r="13" fill="#b35d55"/><circle cx="78" cy="258" r="8" fill="#a7b5c7"/><circle cx="82" cy="47" r="8" fill="#a7b5c7"/>
+            <path d="M273 150H308M300 143L308 150L300 157" stroke="#556e8c" stroke-width="1.5" fill="none"/>
+            <g transform="translate(331 68)"><rect width="132" height="171" rx="8" fill="#f9f8f4" stroke="#a6b3c4"/><rect x="15" y="20" width="65" height="5" rx="2" fill="#647b97"/><g fill="#c1cbd7"><rect x="15" y="43" width="100" height="4" rx="2"/><rect x="15" y="57" width="89" height="4" rx="2"/><rect x="15" y="71" width="100" height="4" rx="2"/><rect x="15" y="85" width="77" height="4" rx="2"/></g><path d="M15 110H117" stroke="#d8dee7"/><text x="15" y="132" fill="#526a86" font-family="ui-monospace, monospace" font-size="10">retrieve</text><text x="15" y="148" fill="#526a86" font-family="ui-monospace, monospace" font-size="10">or generate</text></g>
+            <text x="143" y="294" fill="#526a86" text-anchor="middle" font-family="ui-monospace, monospace" font-size="11">graph representation</text>
+            <text x="398" y="270" fill="#526a86" text-anchor="middle" font-family="ui-monospace, monospace" font-size="11">text description</text>
+          </svg>
+          <div class="art-caption"><span>Learning across representations.</span><span class="art-caption-index">02—03</span></div>
+        </div>
+        <div class="project-copy">
+          <div class="project-topline"><p class="eyebrow">Graph learning · NLP</p><span class="status status-team"><span aria-hidden="true"></span> Team project</span></div>
+          <h3 id="molecular-title">Molecular graph<br>captioning</h3>
+          <p class="project-lead">Connecting molecular structure with natural-language descriptions.</p>
+          <p>A collaborative ALTEGRAD project exploring graph–text retrieval, retrieval-augmented generation, and direct graph-to-text generation. We worked across the approaches and compared their results.</p>
+          <ul class="tags" aria-label="Technologies and methods"><li>PyTorch Geometric</li><li>GNNs</li><li>Contrastive learning</li><li>Language models</li></ul>
+          <a class="text-link" href="https://github.com/lecoqm/molecular-graph-captioning">View my fork <span aria-hidden="true">↗</span></a>
+          <p class="credit">Shared work with Nazim Fadli and Zié Coulibaly. <a href="https://github.com/Nazim-fad/molecular-graph-captioning">Original team repository ↗</a></p>
+        </div>
+        <details class="project-details">
+          <summary><span>Read project notes</span><span class="details-toggle" aria-hidden="true"></span></summary>
+          <div class="detail-grid">
+            <div><h4>The problem</h4><p>Produce a natural-language description from a molecular graph. The task combines structural representations with language understanding and generation.</p></div>
+            <div><h4>The approaches</h4><p>Align graph and text embeddings for retrieval, use retrieved descriptions to support a language model, or condition a text decoder directly on a graph representation.</p></div>
+            <div><h4>How we worked</h4><p>Modelling, experimentation, and analysis were shared across the group. We contributed across the approaches, and the linked repositories present the collective project.</p></div>
+          </div>
+        </details>
+      </article>
+
+      <article class="project project-industrial" id="industrial-anomalies" aria-labelledby="industrial-title">
+        <div class="project-art art-industrial">
+          <div class="art-meta"><span>03 / INDUSTRIAL SIGNALS</span><span class="coming-mark">IN PREPARATION</span></div>
+          <svg class="project-illustration" viewBox="0 0 500 310" role="img" aria-labelledby="industrial-diagram-title industrial-diagram-desc">
+            <title id="industrial-diagram-title">A planned study of residuals and alert thresholds</title>
+            <desc id="industrial-diagram-desc">A conceptual sensor signal, a predicted signal, and a sustained residual above a threshold. These are illustrations, not experimental results.</desc>
+            <defs><pattern id="sensor-grid" width="38" height="38" patternUnits="userSpaceOnUse"><path d="M38 0H0V38" fill="none" stroke="#dbc5ae" stroke-width=".7"/></pattern></defs>
+            <rect x="36" y="45" width="428" height="208" fill="url(#sensor-grid)"/>
+            <rect x="293" y="45" width="119" height="208" rx="3" fill="#d9a67e" opacity=".17"/>
+            <g fill="#805a3b" font-family="ui-monospace, monospace" font-size="10"><text x="38" y="32">SENSOR / FORECAST</text><text x="38" y="184">RESIDUAL / THRESHOLD</text><text x="295" y="277">sustained deviation</text></g>
+            <path d="M37 117C55 117 60 84 80 84S108 137 129 137S155 83 176 83S203 138 225 138S250 85 270 85S295 137 317 137S344 83 365 83S394 137 415 137S440 85 463 85" fill="none" stroke="#a58e73" stroke-width="2" stroke-dasharray="5 5"/>
+            <path d="M37 118C55 119 61 82 80 85S108 139 129 135S155 84 176 85S204 137 225 135S250 82 270 85S287 79 296 72S310 58 325 62S348 37 367 45S393 74 415 75S440 84 463 82" fill="none" stroke="#a04e2d" stroke-width="2.8" stroke-linecap="round"/>
+            <path d="M37 220H463" stroke="#927458" stroke-width="1.5" stroke-dasharray="5 5"/>
+            <path d="M37 244L58 241L79 244L100 242L121 245L142 241L163 245L184 244L205 241L226 244L247 242L268 244L283 241L297 213L309 203L330 208L352 200L373 206L394 202L412 219L432 231L463 241" fill="none" stroke="#a04e2d" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="297" cy="213" r="5" fill="#a04e2d" stroke="#f0e6d9" stroke-width="2"/>
+          </svg>
+          <div class="art-caption"><span>Conceptual illustration · no measured results</span><span class="art-caption-index">03—03</span></div>
+        </div>
+        <div class="project-copy">
+          <div class="project-topline"><p class="eyebrow">Time series · Anomaly detection</p><span class="status status-soon"><span aria-hidden="true"></span> Coming soon</span></div>
+          <h3 id="industrial-title">Industrial anomaly<br>detection</h3>
+          <p class="project-lead">A public-data project inspired by my internship on industrial sensor time series.</p>
+          <p>The planned study will use a forecasting model and its residuals to detect unusual behaviour, with particular attention to adaptive thresholds that can absorb a sustained fault.</p>
+          <ul class="tags" aria-label="Planned methods"><li>LSTM forecasting</li><li>Multivariate signals</li><li>Adaptive thresholds</li></ul>
+          <p class="planned-note"><span aria-hidden="true">↳</span> A standalone implementation with open data is planned. The public repository will be added here when it is ready.</p>
+        </div>
+        <details class="project-details">
+          <summary><span>Read the planned project outline</span><span class="details-toggle" aria-hidden="true"></span></summary>
+          <div class="detail-grid">
+            <div><h4>The question</h4><p>How can an adaptive alert threshold detect sustained faults without gradually treating the abnormal behaviour as normal?</p></div>
+            <div><h4>The planned comparison</h4><p>A statistical baseline and an LSTM forecaster, with fixed and adaptive thresholds evaluated using the same saved forecasting residuals.</p></div>
+            <div><h4>The planned evaluation</h4><p>Use public industrial sensor data with fault labels. Report detected events, false alerts, and detection delay, with training and calibration separated from evaluation.</p></div>
+          </div>
+        </details>
+      </article>
+    </section>
+
+    <section class="about-section container" id="approach" aria-labelledby="about-title">
+      <div class="about-intro"><p class="eyebrow">About my work</p><h2 id="about-title">The model.<br>The evidence.<br><em>The system around it.</em></h2></div>
+      <div class="about-copy">
+        <p class="about-lead">I’m interested in both the modelling question and what it takes to make the result useful.</p>
+        <p>The projects here cover different parts of that process: comparing representations and architectures, evaluating models on appropriate data splits, and building the tools to inspect predictions after training.</p>
+        <dl class="approach-list">
+          <div><dt><span>01</span> Model & compare</dt><dd>Start with a baseline, then examine what a more complex approach adds.</dd></div>
+          <div><dt><span>02</span> Evaluate & explain</dt><dd>Look at failures and limitations alongside aggregate results.</dd></div>
+          <div><dt><span>03</span> Build & reproduce</dt><dd>Make the workflow understandable and runnable by someone else.</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner"><div><p class="eyebrow">Keep exploring</p><a class="footer-link" href="https://github.com/lecoqm">Find me on GitHub <span aria-hidden="true">↗</span></a></div><div class="footer-meta"><span>Mathis Lecoq</span><span>Data science & machine learning</span><a href="#top">Back to top ↑</a></div></div>
+  </footer>
+</body>
+</html>
