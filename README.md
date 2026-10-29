@@ -1,20 +1,25 @@
 # Mathis Lecoq — portfolio
 
-A static portfolio for **https://lecoqm.github.io/**, with a dark background, a profile column, and a project list. The layout follows the profile-and-projects structure requested by Mathis, inspired by <https://mreleden.github.io/projects.html>.
+A static portfolio for **https://lecoqm.github.io/**, with a dark background and a profile column. The layout follows the structure requested by Mathis, inspired by <https://mreleden.github.io/index.html>.
+
+- **Home — `index.html`:** introduction, short summaries of the three featured projects, About me, and Contact.
+- **Project details — `projects.html`:** full write-ups, methods, deliverables, and the upcoming project's outline.
+
+Each project title and its details link on the home page opens the matching section of `projects.html`. The sidebar and back links let visitors move between the two pages.
 
 The desktop profile column stays visible while scrolling. On smaller screens, the profile moves above the projects. All content and links work without JavaScript. There are no dependencies or build tools.
 
 ## Update the existing site
 
-1. Extract the ZIP. Inside `lecoqm.github.io`, you will find `index.html`, `README.md`, and the `assets` folder.
+1. Extract the ZIP. Inside `lecoqm.github.io`, you will find `index.html`, **`projects.html`**, `README.md`, and the `assets` folder.
 2. Copy these files into your existing local **lecoqm.github.io** Git repository, replacing the matching files and adding `assets/profile.svg`. Preserve any unrelated files you have added.
 3. Preview the result by opening `index.html` in a browser.
 4. From your repository folder, use PowerShell:
 
    ```powershell
    git status
-   git add index.html README.md assets/styles.css assets/site.js assets/favicon.svg assets/profile.svg
-   git commit -m "Redesign portfolio with dark theme and profile sidebar"
+   git add index.html projects.html README.md assets/styles.css assets/site.js assets/favicon.svg assets/profile.svg
+   git commit -m "Add contact section after About me"
    git push
    ```
 
@@ -24,20 +29,26 @@ Commit the extracted website files, not the ZIP.
 
 ## Personalise the left column
 
-Open `index.html` and find the comment beginning **PROFILE**.
+Find the comment beginning **PROFILE** in both `index.html` and `projects.html`. Keep the sidebar information consistent in both files.
 
 - **Name:** edit `profile-name`.
 - **Role or headline:** edit the paragraph with `class="profile-role"`.
 - **Short biography:** edit the paragraph with `class="profile-bio"`.
 - **Links:** edit the GitHub and LinkedIn anchors in `profile-links`.
-- **Longer biography:** edit the section with `id="about"` near the end of the file.
+- **Longer biography:** edit the section with `id="about"` near the end of `index.html`.
+
+### Edit the contact section
+
+The **Contact** section follows **About me** on the home page. Both sidebars link directly to `index.html#contact`. It currently contains your LinkedIn and GitHub links.
+
+Edit the section with `id="contact"` in `index.html` to change the text or links. To add an email address, add a new list item containing a `mailto:` link with the address you want to make public.
 
 ### Add your photograph
 
 The initial version uses an SVG with the initials **ML**. To use a portrait:
 
 1. Add the image as `assets/profile.jpg`.
-2. Change the profile `<img>` to:
+2. Change the profile `<img>` in both HTML files to:
 
    ```html
    <img class="profile-image" src="assets/profile.jpg" width="152" height="152" alt="Portrait of Mathis Lecoq">
@@ -48,7 +59,7 @@ The CSS crops the image to a circle. A square photo works best.
 ### Add your CV
 
 1. Add your PDF as `assets/cv.pdf`.
-2. In the **PROFILE** block, find the comment beginning **Optional CV link**.
+2. In the **PROFILE** block of each HTML file, find the comment beginning **Optional CV link**.
 3. Remove the surrounding HTML comment markers and explanatory sentence, leaving only:
 
    ```html
@@ -61,19 +72,20 @@ The download link is absent until a PDF is added.
 
 ## Edit the projects
 
-Each project is an `<article>` in `index.html` with a heading, a stack/focus/links summary, and visible project notes:
+The home page has a short `<article>` for each project. Full write-ups are in `projects.html`, using the same project IDs:
 
 1. **Bike demand forecasting** (`bike-demand`): public project covering forecasting and the ML lifecycle.
 2. **Molecular graph captioning** (`molecular-captioning`): collective ALTEGRAD work with Nazim Fadli and Zié Coulibaly, with links to Mathis's fork and the original team repository.
 3. **Industrial anomaly detection** (`industrial-anomalies`): future public-data project, clearly marked **Coming soon**.
 
-When the third repository is ready, replace its planned scope with the actual work, change its status label, and add the repository URL to its summary. Only add measured results together with the evaluation context needed to understand them.
+When the third repository is ready, update its summary in `index.html` and its full write-up in `projects.html`. Replace the planned scope with the actual work, change its status label, and add the repository URL. Only add measured results together with the evaluation context needed to understand them.
 
 The workflow figures are explanations of the approaches. They are not dashboards or measured experimental results.
 
 ## Files and styling
 
-- `index.html`: profile, projects, biography, and links.
+- `index.html`: home page, short project summaries, biography, and links.
+- `projects.html`: full project write-ups and links back to the home page.
 - `assets/styles.css`: colours, typography, the sticky column, and mobile layout. The colour palette is defined in `:root` at the top.
 - `assets/site.js`: optional active-navigation highlighting.
 - `assets/profile.svg`: default initials image.
